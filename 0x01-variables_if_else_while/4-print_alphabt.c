@@ -2,18 +2,20 @@
 /**
  * main - program that prints the alphabet in lowercase, followed by a new line
  * Print all the letters except q and e
+ *
  * return:0 success
  */
 int main(void)
 {
-	int i;
+	char c;
 
-	for (i = 'a'; i <= 'z'; i++)
-	{
-		if (i != 'e' && i != 'q')
-		{
-			putchar(i);
+	c = 'a';
+	while
+		(c <= 'z') {
+			if ((c != 'q' && c != 'e') && c <= 'z')
+				putchar(c);
+			c++;
 		}
-		putchar('\n');
-		return (0);
+	putchar('\n');
+	return (0);
 }
