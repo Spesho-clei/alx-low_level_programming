@@ -6,17 +6,16 @@
  */
 void print_most_numbers(void)
 {
-	int i;
+	int c;
 
-	i = '0';
+	c = '0';
 
 	while
-		(i <= '9');
+		(c <= '9');
 	{
-		if ((i != '2' && i != '4') && i <= '9')
-			_putchar(i);
-			i++;
+		if ((c != '2' && c != '4') && c <= '9')
+			_putchar(c);
+		c++;
 		}
 	_putchar('\n');
-	return (0);
 }
