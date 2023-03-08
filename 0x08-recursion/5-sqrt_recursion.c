@@ -1,37 +1,27 @@
 #include "main.h"
 /**
- * _determine - determine function square root of a number
- *
- * @n: number
- * @i: input
- * Return: square root
+ * square - function to find square
+ * @n: integer to find square
+ * @root: integer
+ * Return: integer
  */
-int _determine(int n, int i)
+int square(int n, int root)
 {
-	if (n == 0 || n == 1)
-		return (n);
-	else if (i * i < n)
-		return (_determine(i + 1, n));
-	else if (i * i == n)
-		return (i);
-	return (-1);
-
-	return (-1);
+	if (root * root == n)
+		return (root);
+	else if (root * root < n)
+		return (square(n, root + 1));
+	else
+		return (-1);
 }
 /**
- * _sqrt_recursion - function that returns the natural square root of a number
+ * _sqrt_recursion - function that returns
+ * the natural square root of a number
  *
- * @n: input
- * Return; sqrt_recursion
+ * @n: integer
+ * Return: square root of a number
  */
 int _sqrt_recursion(int n)
 {
-	int i = 0;
-
-	if (i < 0)
-		return (-1);
-	else
-	{
-		return (_determine(i, n));
-	}
+	return (square(n, 1));
 }
