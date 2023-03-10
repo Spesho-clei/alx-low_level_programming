@@ -6,9 +6,6 @@
  *
  * @argc: number of command line argument
  * @argv: array of srings containing arguments
- * @i: integer
- * @j: integer
- * @result: i * j
  * Return: 1 if error otherwise 0
  */
 int main(int argc, char *argv[])
