@@ -12,8 +12,10 @@ char *str_concat(char *s1, char *s2)
 {
 	char *result;
 
-	if (s1 == NULL || s2 == NULL)
-		return (" ");
+	if (!s1)
+		s1 = " ";
+	if (!s2)
+		s2 = " ";
 	result = (char *)malloc(strlen(s1) + strlen(s2) + 1);
 	if (result == NULL)
 		return (NULL);
