@@ -54,8 +54,6 @@ char **strtow(char *str)
 		}
 		i++;
 	}
-	return(words);
+	return (words);
 	free(words);
 }
-
-	
