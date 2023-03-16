@@ -3,33 +3,35 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * multiply - function to multiply two positive numbers
+ * main - function to multiply two positive number
  *
- * @num1: input
- * @num2: input
- * Return: 0
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: multiplication
  */
-int multiply(int num1, int num2)
-{
-	return (num1 * num2);
-}
-
-/**
- * is_number - Function to check if a string contains only digits
- *
- * @str: pointer to string
- * Return: 0 if success otherwise 1
- */
-int is_number(char *str)
+int main(int argc, char *argv[])
 {
 	int i;
+	int j;
+	unsigned long mul;
 
-	for (i = 0; str[i] != '\0'; i++)
+	if (argc != 3)
 	{
-		if (!isdigit(str[i]))
+		printf("Error\n");
+		exit(98);
+	}
+	for (i = 1; i < argc; i++)
+	{
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			return (0);
+			if (argv[i][j] > 57 || argv[i][j] < 48)
+			{
+				printf("Error\n");
+				exit(98);
+			}
 		}
 	}
-	return (1);
+	mul = atoi(argv[1]) * atoi(argv[2]);
+	printf("%lu\n", mul);
+	return (0);
 }
